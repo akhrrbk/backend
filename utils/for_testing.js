@@ -15,7 +15,12 @@ return array.length === 0
     : array.reduce(reducer, 0) / array.length
 }
 
+const calculatoradd = (a, b) => {
+    return a + b
+}
+
 module.exports = {
 palindrome,
 average,
+calculatoradd
 }

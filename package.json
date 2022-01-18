@@ -3,20 +3,22 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=production nodemon index.js",
     "logs:prod": "heroku logs --tail",
     "deploy": "git push heroku main",
     "lint": "eslint .",
-    "test": "jest --verbose"
+    "test": "cross-env NODE_ENV=production jest --verbose"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "dotenv": "^12.0.3",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "lodash": "^4.17.21",
     "mongoose": "^6.1.6",
     "mongoose-unique-validator": "^3.0.0",
     "morgan": "~1.9.1",
@@ -28,7 +30,8 @@
     "cross-env": "^7.0.3",
     "eslint-plugin-react": "^7.28.0",
     "jest": "^27.4.7",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.1"
   },
   "proxy": "http://localhost:3001",
   "jest": {

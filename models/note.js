@@ -18,6 +18,10 @@ const noteSchema = new mongoose.Schema({
   url: {type: String, required: true},
   likes: {type: String, required: true},
   date: Date,
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  }
 })
 noteSchema.plugin(uniqueValidator)
 
@@ -28,6 +32,6 @@ noteSchema.set('toJSON', {
       delete returnedObject.__v
       // delete returnedObject.date
   }
-  })
+})
 
-module.exports = mongoose.model('secondDBblogs', noteSchema)  
+module.exports = mongoose.model('seconddbblogs', noteSchema)  

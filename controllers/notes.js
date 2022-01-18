@@ -4,10 +4,9 @@ const Note = require('../models/note')
 personsRouter.get('/home', (req, res) => {
     res.send('home page')
 })
-personsRouter.get('/', (req, res) => {
-    Note.find({}).then(notes => {
-      res.json(notes)
-    })
+personsRouter.get('/', async (req, res) => {
+    const notes = await Note.find({})   
+    res.json(notes)
 })
 
 personsRouter.get('/:id', (req, res) => {
