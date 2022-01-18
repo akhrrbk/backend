@@ -9,61 +9,48 @@ personsRouter.get('/', async (req, res) => {
     res.json(notes)
 })
 
-personsRouter.get('/:id', (req, res) => {
-    Note.findById(req.params.id)
-        .then(note => {
-            if(note){
-                res.json(note)
-            } else {
-                res.status(404).end()
-            }
-        })
-        .catch((error) => {
-            console.log(error)
-            res.status(400).end()
-        })
+personsRouter.get('/:id', async (req, res, next) => {
+        const note = await Note.findById(req.params.id)
+        if(note){
+            res.json(note)
+        } else {
+            res.status(404).end()
+        }    
 })
 
-personsRouter.post('/', async (req, res) => {
+personsRouter.post('/', async (req, res, next) => {
     const body = req.body
 
-    // if(Object.keys(body).length < 2){
-    //     return res.status(400).json({error: 'content missing'})
-    // }
-    
     const note = new Note({
         title: body.title,
         author: body.author,
         url: body.url,
-        likes: body.url,
+        likes: body.likes === '' ? 0 : body.likes,
         date: new Date(),
     })
+    
     const savedNote = await note.save()
     res.json(savedNote)
 })
 
 
-personsRouter.delete('/:id', (req, res, next) => {
-    Note.findByIdAndRemove(req.params.id)
-      .then(res => {
-        res.status(204).end()
-      })
-      .catch(error => next(error))
-  })
+personsRouter.delete('/:id', async (req, res, next) => {
+    await Note.findByIdAndRemove(req.params.id)
+    res.status(204).end()
+})
 
-personsRouter.put('/:id', (req, res, next) => {
+personsRouter.put('/:id', async (req, res, next) => {
     const body = req.body
 
     const note = {
-        name: body.name,
-        number: body.number,
+        title: body.title,
+        author: body.author,
+        url: body.url,
+        likes: body.url
     }
-    Note.findByIdAndUpdate(req.params.id)
-        .then(updatedNote => {
-            res.json(updatedNote)
-        })
-        .catch(error => next(error))
-    console.log('but updated the number');
+
+    const updatedNote = await Note.findByIdAndUpdate(req.params.id, note, { new: true })
+    res.json(updatedNote.toJSON())
 })
 
 module.exports = personsRouter

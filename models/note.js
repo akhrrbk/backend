@@ -16,7 +16,7 @@ const noteSchema = new mongoose.Schema({
   title: {type: String, required: true},
   author: {type: String, required: true},
   url: {type: String, required: true},
-  likes: {type: String, required: true},
+  likes: {type: String},
   date: Date,
   user: {
     type: mongoose.Schema.Types.ObjectId,
@@ -30,6 +30,7 @@ noteSchema.set('toJSON', {
       returnedObject.id = returnedObject._id.toString()
       delete returnedObject._id
       delete returnedObject.__v
+      // delete returnedObject.likes
   }
 })
 
