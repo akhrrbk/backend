@@ -24,7 +24,7 @@ personsRouter.get('/:id', (req, res) => {
         })
 })
 
-personsRouter.post('/', (req, res) => {
+personsRouter.post('/', async (req, res) => {
     const body = req.body
 
     // if(Object.keys(body).length < 2){
@@ -38,11 +38,8 @@ personsRouter.post('/', (req, res) => {
         likes: body.url,
         date: new Date(),
     })
-    
-    note.save().then(savedNote => {
-        res.json(savedNote)
-    })
-    
+    const savedNote = await note.save()
+    res.json(savedNote)
 })
 
 

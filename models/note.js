@@ -30,8 +30,9 @@ noteSchema.set('toJSON', {
       returnedObject.id = returnedObject._id.toString()
       delete returnedObject._id
       delete returnedObject.__v
-      // delete returnedObject.date
   }
 })
 
-module.exports = mongoose.model('seconddbblogs', noteSchema)  
+const Note = mongoose.model('seconddbblogs', noteSchema)
+// module.exports = mongoose.model('seconddbblogs', seconddbblogs)  
+module.exports = Note
