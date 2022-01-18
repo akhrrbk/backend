@@ -20,7 +20,7 @@ const noteSchema = new mongoose.Schema({
   date: Date,
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'userDB'
   }
 })
 noteSchema.plugin(uniqueValidator)
@@ -34,6 +34,6 @@ noteSchema.set('toJSON', {
   }
 })
 
-const Note = mongoose.model('seconddbblogs', noteSchema)
+const Note = mongoose.model('blogDB', noteSchema)
 // module.exports = mongoose.model('seconddbblogs', seconddbblogs)  
 module.exports = Note
