@@ -1,0 +1,10 @@
+POST http://localhost:3001/blogs
+Content-Type: application/json
+# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoa2FsYXQ5OSIsImlkIjoiNjFlNzBhNGVlZmI3NTQzNDcxMWQ5M2ZmIiwiaWF0IjoxNjQyNTc2NjY2fQ.HIQJKxlTuisrDM8ZGWv1H6Ya0SesTvEL-euFJW5WEbg
+
+{
+    "title": "this is new content with a login",
+    "author": "Axror",
+    "url": "localhost:3001/blogs",
+    "user": "61e70a4eefb75434711d93ff"
+}
