@@ -1,9 +1,8 @@
 POST http://localhost:3001/blogs
 Content-Type: application/json
-# Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoa2FsYXQ5OSIsImlkIjoiNjFlNzBhNGVlZmI3NTQzNDcxMWQ5M2ZmIiwiaWF0IjoxNjQyNTc2NjY2fQ.HIQJKxlTuisrDM8ZGWv1H6Ya0SesTvEL-euFJW5WEbg
-
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoa2FsYXQ5OSIsImlkIjoiNjFlNzBhNGVlZmI3NTQzNDcxMWQ5M2ZmIiwiaWF0IjoxNjQyNTg4MTkzLCJleHAiOjE2NDI1OTE3OTN9.Fa2KSRsiWYa11WVH1T-lUc8-puamqbFFVTReFJDNcj8
 {
-    "title": "this is new content with a login",
+    "title": "333 is blah blah blah",
     "author": "Axror",
     "url": "localhost:3001/blogs",
     "user": "61e70a4eefb75434711d93ff"

@@ -72,4 +72,4 @@ personsRouter.put('/:id', async (req, res, next) => {
     res.json(updatedNote.toJSON())
 })
 
-module.exports = personsRouter  
+module.exports = personsRouter

@@ -1,0 +1,25 @@
+{
+    "title": "something new",
+    "author": "Azizbek",
+    "url": "localhost:3001/blogs",
+    "userId": "61e6a8be1a991ded6749ded3"
+}
+
+shkalat99 user
+gdhjfefeuirhfwueurhrbqeurhg password
+
+{
+    "username": "enajon",
+    "name": "Masturaxon",
+    "password": "hgfhifjhefjerfjkeje"
+}
+{
+    "title": "new title with middleware token",
+    "author": "Masturaxon",
+    "url": "localhost3001blogs",
+    "likes": "",
+    "userId": "61e7cb07825eb8699a52637f"
+}
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVuYWpvbiIsImlkIjoiNjFlN2NiMDc4MjVlYjg2OTlhNTI2MzdmIiwiaWF0IjoxNjQyNTg3MDE0LCJleHAiOjE2NDI1OTA2MTR9.EigVF138K5nnC0WP28gmDDvYKGzVeuqDZLBflkk6l7M
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNoa2FsYXQ5OSIsImlkIjoiNjFlNzBhNGVlZmI3NTQzNDcxMWQ5M2ZmIiwiaWF0IjoxNjQyNTg4MTkzLCJleHAiOjE2NDI1OTE3OTN9.Fa2KSRsiWYa11WVH1T-lUc8-puamqbFFVTReFJDNcj8
